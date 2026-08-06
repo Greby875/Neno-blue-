@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Greby — The Best Tech Deals, Already Found</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ INTRO ============ -->
+<div id="intro">
+  <canvas id="introCanvas"></canvas>
+  <div class="intro-content">
+    <img src="logo.png" alt="Greby" class="intro-logo">
+    <p class="intro-tagline">Every deal, <span>already compared.</span></p>
+    <div class="intro-progress"><div class="intro-progress-fill"></div></div>
+    <button id="introSkip" class="intro-skip">Skip intro</button>
+  </div>
+</div>
+
+<!-- ============ SITE ============ -->
+<div id="site">
+
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#top" class="nav-brand"><img src="logo.png" alt="Greby" class="nav-logo"></a>
+      <nav class="nav-links">
+        <a href="#top">Home</a>
+        <a href="#how">How it works</a>
+        <a href="#deals">Today's Deals</a>
+        <a href="#join">Alerts</a>
+      </nav>
+      <button class="nav-menu-btn" id="navBurger">Menu</button>
+    </div>
+    <div class="nav-mobile" id="navMobile">
+      <a href="#top">Home</a>
+      <a href="#how">How it works</a>
+      <a href="#deals">Today's Deals</a>
+      <a href="#join">Alerts</a>
+    </div>
+  </header>
+
+  <!-- HERO — scroll-linked 3D rotation -->
+  <section class="hero" id="top">
+    <div class="hero-left reveal">
+      <p class="eyebrow">• TODAY'S PICKS</p>
+      <h1 class="hero-title">The Best Tech<br>Deal Is Already<br><span class="grad-text">Found For You.</span></h1>
+      <p class="hero-sub">Greby scans every seller for the lowest live price on the gadgets people actually search for — so the "best deal" isn't a guess, it's already sitting there when you tap in.</p>
+      <div class="hero-actions">
+        <button class="btn-primary" data-scroll="#deals">See Today's Deals →</button>
+        <button class="btn-ghost" data-scroll="#how">How It Works</button>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="orb-stage" id="orbStage">
+        <div class="orb-core"></div>
+        <div class="orb-ring ring-a"></div>
+        <div class="orb-ring ring-b"></div>
+        <div class="orb-ring ring-c"></div>
+        <img src="logo.png" alt="Greby" class="orb-logo" id="orbLogo">
+      </div>
+      <p class="scroll-hint">↓ scroll</p>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Live price tracking</span><span>◆</span>
+      <span>Verified best deal</span><span>◆</span>
+      <span>New drops daily</span><span>◆</span>
+      <span>No fake discounts</span><span>◆</span>
+      <span>Live price tracking</span><span>◆</span>
+      <span>Verified best deal</span><span>◆</span>
+      <span>New drops daily</span><span>◆</span>
+      <span>No fake discounts</span><span>◆</span>
+    </div>
+  </div>
+
+  <!-- STICKY PINNED PANEL -->
+  <section class="pin-section" id="how">
+    <div class="pin-bg">
+      <img src="https://images.unsplash.com/photo-1524234107056-1c1f48f64ab8?w=1600&q=70&auto=format&fit=crop" alt="" class="pin-bg-img">
+      <div class="pin-bg-fade"></div>
+      <div class="pin-heading">
+        <p class="section-eyebrow">HOW GREBY WORKS</p>
+        <h2 class="section-title">Three steps, done automatically</h2>
+      </div>
+    </div>
+    <div class="pin-cards">
+      <article class="pin-card" data-step="1">
+        <span class="pin-num">01</span>
+        <h3>Compare</h3>
+        <p>Every listing for a product gets pulled from every seller carrying it, live, at the same time.</p>
+      </article>
+      <article class="pin-card" data-step="2">
+        <span class="pin-num">02</span>
+        <h3>Curate</h3>
+        <p>Fake "was" prices and inflated discounts get filtered out — you only see real price drops.</p>
+      </article>
+      <article class="pin-card" data-step="3">
+        <span class="pin-num">03</span>
+        <h3>Save</h3>
+        <p>The lowest verified price gets surfaced first, with a direct link straight to checkout.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- PARALLAX GIANT TEXT -->
+  <section class="parallax-section">
+    <div class="parallax-bg" id="parallaxBg">
+      <img src="https://images.unsplash.com/photo-1756705533779-105bf34e0722?w=1800&q=70&auto=format&fit=crop" alt="Latest tech gadgets" class="parallax-img">
+    </div>
+    <div class="parallax-overlay">
+      <div class="parallax-row reveal">
+        <p class="fc-sub">Get today's biggest gadget<br>price drops sent to you.</p>
+        <h2 class="parallax-word">GADGETS</h2>
+      </div>
+      <form class="alert-form reveal" id="alertForm">
+        <input type="email" placeholder="Enter your email" required>
+        <button type="submit">Get Deal Alerts</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- DEALS GRID -->
+  <section class="deals" id="deals">
+    <p class="section-eyebrow reveal">LIVE RIGHT NOW</p>
+    <h2 class="section-title reveal">Today's verified deals</h2>
+    <p class="section-sub reveal">Prices checked continuously — what you see is what you'll pay.</p>
+
+    <div class="deal-grid">
+      <article class="deal-card reveal">
+        <span class="deal-badge">-34%</span>
+        <div class="deal-img"><img src="https://images.unsplash.com/photo-1556196148-1fb724238998?w=700&q=70&auto=format&fit=crop" alt="Wireless headphones"></div>
+        <div class="deal-body">
+          <h3>Over-Ear Wireless Headphones</h3>
+          <p class="deal-stars">★★★★★ <span>4.8 (2,140)</span></p>
+          <div class="deal-price"><span class="was">$129.00</span><strong>$84.90</strong></div>
+          <a href="#" class="btn-deal">View Deal →</a>
+        </div>
+      </article>
+
+      <article class="deal-card reveal">
+        <span class="deal-badge">-28%</span>
+        <div class="deal-img"><img src="https://images.unsplash.com/photo-1708651145401-6be804cd02d4?w=700&q=70&auto=format&fit=crop" alt="Smartwatch"></div>
+        <div class="deal-body">
+          <h3>Fitness Smartwatch, GPS</h3>
+          <p class="deal-stars">★★★★★ <span>4.6 (1,389)</span></p>
+          <div class="deal-price"><span class="was">$199.00</span><strong>$142.90</strong></div>
+          <a href="#" class="btn-deal">View Deal →</a>
+        </div>
+      </article>
+
+      <article class="deal-card reveal">
+        <span class="deal-badge">-41%</span>
+        <div class="deal-img"><img src="https://images.unsplash.com/photo-1520390244437-6f1c5eae66ff?w=700&q=70&auto=format&fit=crop" alt="Bluetooth speaker"></div>
+        <div class="deal-body">
+          <h3>Portable Bluetooth Speaker</h3>
+          <p class="deal-stars">★★★★☆ <span>4.4 (960)</span></p>
+          <div class="deal-price"><span class="was">$89.00</span><strong>$52.50</strong></div>
+          <a href="#" class="btn-deal">View Deal →</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- JOIN -->
+  <section class="join" id="join">
+    <div class="join-inner reveal">
+      <h2>Never overpay for tech <span class="grad-text">again.</span></h2>
+      <p>Get a short list of verified deals dropped into your inbox — only when the price actually falls.</p>
+      <form class="join-form">
+        <input type="email" placeholder="Enter your email" required>
+        <button type="submit" class="btn-primary">Get Deal Alerts</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- DISCLOSURE -->
+  <section class="disclosure">
+    <p>Greby earns a commission from qualifying purchases made through links on this page, at no extra cost to you. This is how we keep finding and verifying deals for free.</p>
+  </section>
+
+  <footer class="footer">
+    <img src="logo.png" alt="Greby" class="footer-logo">
+    <p>© 2026 Greby. Every deal, already compared.</p>
+  </footer>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
